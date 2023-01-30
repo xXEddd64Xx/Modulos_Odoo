@@ -3,7 +3,7 @@
 
     <!-- Definimos como mostramos la vista en el modelo -->
     <record id='biblioteca_comic_action' model='ir.actions.act_window'>
-        <field name="name">Biblioteca de Comics</field>
+        <field name="name">Biblioteca de Comics de la re-hostia</field>
         <!-- Indicamos a que modelo aplica -->
         <field name="res_model">biblioteca.comic</field>
         <!-- Indicamos que los comics pueden verse en tree para el listado,

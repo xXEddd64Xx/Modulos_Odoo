@@ -1,0 +1,44 @@
+<odoo>
+  <data>
+    <record id="book_form_view" model="ir.ui.view">
+      <field name="name">Formulario de libros</field>
+      <field name="model">library.book</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <button name="action_prev" string="Anterior" type="action"
+              class="btn-secondary"/>
+            <button string="Guardar" type="object" class="btn-primary"
+              name="action_save"/>
+            <button name="action_next" string="Siguiente" type="action"
+              class="btn-secondary"/>
+          </header>
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="author_id"/>
+              <field name="isbn"/>
+              <field name="publication_date"/>
+              <field name="active"/>
+              <field name="note"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <record id="book_tree_view" model="ir.ui.view">
+      <field name="name">Vista de lista de libros</field>
+      <field name="model">library.book</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="author_id"/>
+          <field name="isbn"/>
+          <field name="publication_date"/>
+          <field name="active"/>
+        </tree>
+      </field>
+    </record>
+    <record id="book_action" model="ir.actions.act_window">
+      <field name="name">Libros</field>
+      <field name="res_
