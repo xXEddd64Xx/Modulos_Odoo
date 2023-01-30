@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Biblioteca Comics",  # Titulo del módulo
+    'name': "Biblioteca Comics de la re-hostia",  # Titulo del módulo
     'summary': "Gestionar comics :) (Version simple)",  # Resumen de la funcionaliadad
     'description': """
 Gestor de bibliotecas (Version Simple)
