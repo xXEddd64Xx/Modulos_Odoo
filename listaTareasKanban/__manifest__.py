@@ -13,6 +13,7 @@
 
     'depends': ['project'],
     'data': [
+        'views/view_calendar.xml',
         'views/view_tareas.xml',
     ],
 }
