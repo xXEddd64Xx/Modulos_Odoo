@@ -4,11 +4,6 @@ from datetime import timedelta
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 
-
-# Modelo base, creado como modelo abstracto 
-# Este modelo lo heredarara el modelo BibliotecaComic
-# Y se ha creado puramente con fin didáctico para ver herencia entre modelos
-
 class BaseArchive(models.AbstractModel):
     #Nombre y descripcion del modelo
     _name = 'base.archive'
@@ -27,13 +22,15 @@ class BibliotecaSocio(models.Model):
 
     _description = 'Socio de biblioteca'
 
+    _rec_name = 'nombre'
+
     _inherit = ['base.archive']
     
-    nombre = fields.Char('Nombre', required=True)
+    nombre = fields.Char('Nombre', required=True, index=True)
     
     apellido = fields.Char('Apellido', required=False)
     
-    socio_ids = fields.Char('Id', required=False,)
+    socio_ids = fields.Char('Id', required=False)
 
     
 
