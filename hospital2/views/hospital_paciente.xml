@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Definimos como mostramos la vista en el modelo -->
+    <record id='biblioteca_socio_action' model='ir.actions.act_window'>
+        <field name="name">Pacientes del hospital</field>
+        <!-- Indicamos a que modelo aplica -->
+        <field name="res_model">paciente</field>
+        <!-- Indicamos que los comics pueden verse en tree para el listado,
+            y en form para la creación/edición -->
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Simple menu item, sin más utilidad que la didáctica -->
+    <menuitem name="Pacientes" id="biblioteca_socio_menu" parent="biblioteca_base_menu" action="biblioteca_socio_action"/>
+
+    <!-- Definición de la Vista formulario -->
+    <record id="biblioteca_socio_view_form" model="ir.ui.view">
+        <field name="name">Formulario de Paciente de la biblioteca</field>
+        <field name="model">paciente</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button type="object" name="archivar" string="Archivar Socio"/>
+                </header>
+                <group>
+                    <group>
+                        <field name="nombre"/>
+                        <field name="apellido"/>
+                        <field name="sintoma"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Definición de la vista Tree -->
+    <record id="biblioteca_socio_view_tree" model="ir.ui.view">
+        <field name="name">Lista de Pacientes de la biblioteca</field>
+        <field name="model">paciente</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="apellido"/>
+                <field name="sintoma"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
